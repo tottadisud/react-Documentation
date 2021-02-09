@@ -93,6 +93,17 @@ javascript
       {counter:prevState.counter+1}
     ))
   }
+  
+#### decrementing the value
+ ...javascript
+ 
+ decrementCounter=()=>{
+    if(this.state.counter>0){
+    this.setState(prevState=>(
+      {counter:prevState.counter-1}
+    ))
+  }
+}
    
   
     
