@@ -104,6 +104,32 @@ javascript
     ))
   }
 }
+
+### using Hooks concept for implementing state functionality in function component
+ ...javascript  ...use state...
+ 
+ import React,{useState} from 'react';
+//import Header from './Header'
+  function App(){
+
+    var initialData=()=>{
+      setData({
+        name:"sudheer",
+        role:"web developer"
+      })
+    }
+   
+    const [data,setData]=useState({"name":"sudheer","role":"web developer"})
+    return(
+      <>
+      <h2 onMouseOver={()=>{setData({name:"kumar",role:"mern developer"})}} onMouseOut={initialData}> {data.name} is working as {data.role} </h2>
+      </>
+    )
+  }
+
+export default App;
+
+ 
    
   
     
