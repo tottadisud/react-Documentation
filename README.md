@@ -52,4 +52,77 @@ javascript
     </React fragment>
     
     we have to use Empty tags also(<> </>)....
+    
+    
+### State in React
+ The concept of state provides a way to store the data in a component
+  javascript
+  
+  constructor(){
+    super();
+    this.state={
+      "name":"sudheer",
+      "role":"web devloper"
+    }
+  }
+  .....
+  ### manipulating data from state
+  ..javascript
+  changeStateValues=()=>{
+    this.setState({
+      "name":"kumar",
+      "role":"MERN developer"
+    })
+
+  }
+       render(){
+       return(
+       <>
+        <Header />
+         <h2 onMouseOver={this.changeStateValues}> {this.state.name} working as a {this.state.role} </h2> 
+       <App />
+       </>)
+   }
+   
+   
+ #### using prev state manipulating data for the state
+   ...javascript
+   
+   incrementCounter=()=>{
+    this.setState(prevState=>(
+      {counter:prevState.counter+1}
+    ))
+  }
+   
+  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
      
