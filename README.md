@@ -129,6 +129,26 @@ javascript
 
 export default App;
 
+
+### Applying styles dynamically
+
+
+import './App.css';
+
+function App(){
+  var changeBackground=(e)=>{
+    e.target.setAttribute('class','changeBackground')
+  }
+  const [data,setData]=useState({"name":"sudheer","role":"web developer"})
+  return(
+  <>
+     <h2 onMouseOver={(e)=>{changeBackground(e)}}> {data.name} is working as {data.role} </h2>
+  </>
+  )
+}
+
+export default App;
+
  
    
   
